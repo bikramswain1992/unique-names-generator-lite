@@ -1,6 +1,6 @@
 {
-  "projectName": "unique-names-generator",
-  "projectOwner": "andreasonny83",
+  "projectName": "unique-names-generator-lite",
+  "projectOwner": "bikramswain1992",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -11,17 +11,23 @@
   "commitConvention": "none",
   "contributors": [
     {
+      "login": "bikramswain1992",
+      "name": "Bikram Swain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36069225?v=4",
+      "profile": "https://github.com/bikramswain1992",
+      "contributions": [
+        "packageUpgrading",
+        "codeTrimining",
+        "dictionaryTrimining"
+      ]
+    },
+    {
       "login": "andreasonny83",
       "name": "Andrea Sonny",
       "avatar_url": "https://avatars0.githubusercontent.com/u/8806300?v=4",
       "profile": "https://about.me/andreasonny83",
       "contributions": [
-        "code",
-        "doc",
-        "question",
-        "projectManagement",
-        "ideas",
-        "content"
+        "originalCode"
       ]
     },
     {
@@ -30,7 +36,7 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/5481869?v=4",
       "profile": "https://github.com/abhijitmehta",
       "contributions": [
-        "ideas"
+        "originalCode"
       ]
     },
     {
@@ -39,8 +45,7 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/867428?v=4",
       "profile": "https://grantblakeman.com/",
       "contributions": [
-        "code",
-        "bug"
+        "originalCode"
       ]
     },
     {
@@ -49,8 +54,7 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/15168716?v=4",
       "profile": "https://github.com/erdahuja",
       "contributions": [
-        "doc",
-        "ideas"
+        "originalCode"
       ]
     },
     {
@@ -59,7 +63,7 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/30972152?v=4",
       "profile": "https://github.com/ajainuary",
       "contributions": [
-        "ideas"
+        "originalCode"
       ]
     },
     {
@@ -68,7 +72,7 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/6882093?v=4",
       "profile": "https://github.com/digibake",
       "contributions": [
-        "bug"
+        "originalCode"
       ]
     },
     {
@@ -77,7 +81,7 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/7145590?v=4",
       "profile": "https://chasemoskal.com/",
       "contributions": [
-        "ideas"
+        "originalCode"
       ]
     },
     {
@@ -86,7 +90,7 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/2027794?v=4",
       "profile": "https://github.com/tholst",
       "contributions": [
-        "doc"
+        "originalCode"
       ]
     },
     {
@@ -95,8 +99,7 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/1529107?v=4",
       "profile": "https://github.com/Gusten",
       "contributions": [
-        "code",
-        "ideas"
+        "originalCode"
       ]
     },
     {
@@ -105,10 +108,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/5101376?v=4",
       "profile": "https://alex.codes/",
       "contributions": [
-        "bug",
-        "code"
+        "originalCode"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 8
 }
