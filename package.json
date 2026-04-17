@@ -47,12 +47,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreasonny83/unique-names-generator.git"
+    "url": "git+https://github.com/bikramswain1992/unique-names-generator-lite.git"
   },
   "bugs": {
-    "url": "https://github.com/andreasonny83/unique-names-generator/issues"
+    "url": "https://github.com/bikramswain1992/unique-names-generator-lite/issues"
   },
-  "homepage": "https://github.com/andreasonny83/unique-names-generator#readme",
+  "homepage": "https://github.com/bikramswain1992/unique-names-generator-lite#readme",
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/plugin-transform-class-properties": "^7.28.6",
