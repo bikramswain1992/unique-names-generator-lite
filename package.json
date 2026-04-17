@@ -1,6 +1,6 @@
 {
   "name": "unique-names-generator-lite",
-  "version": "4.7.1",
+  "version": "1.0.0",
   "description": "Generate unique and memorable names. Derivation of the popular 'unique-names-generator' package.",
   "engines": {
     "node": ">=18"

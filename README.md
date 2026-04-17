@@ -1,43 +1,29 @@
-# Unique Names Generator
+# Unique Names Generator Lite
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Build Status](https://travis-ci.com/andreasonny83/unique-names-generator.svg?branch=main)](https://travis-ci.com/andreasonny83/unique-names-generator)
-[![](https://img.shields.io/npm/v/unique-names-generator.svg)](https://npmjs.org/package/unique-names-generator)
-[![](https://img.shields.io/npm/l/unique-names-generator.svg)](https://github.com/andreasonny83/unique-names-generator/blob/main/LICENSE)
-[![Known Vulnerabilities](https://snyk.io/test/github/andreasonny83/unique-names-generator/badge.svg?targetFile=package.json)](https://snyk.io/test/github/andreasonny83/unique-names-generator?targetFile=package.json)
-[![](https://img.shields.io/npm/dt/unique-names-generator.svg)](https://npmjs.org/package/unique-names-generator)
-[![devDependencies Status](https://david-dm.org/andreasonny83/unique-names-generator/dev-status.svg)](https://david-dm.org/andreasonny83/unique-names-generator?type=dev)
 
-[![NPM](https://nodei.co/npm/unique-names-generator.png)](https://npmjs.org/package/unique-names-generator)
+[![](https://img.shields.io/npm/l/unique-names-generator.svg)](https://github.com/andreasonny83/unique-names-generator/blob/main/LICENSE)
+
 
 > More than 50,000,000 name combinations out of the box
 
-## What is Unique name generator?
+## What is Unique name generator lite?
 
-Unique name generator is a tree-shakeable Node package for generating random and unique names.
+Unique name generator lite is a derivative work of the popular package Unique name generator. It provides a curated list of dictionaries to generate unique and memorable names which is lightweight and tree-shakeable.
 
 It comes with a list of dictionaries out of the box, but you can also provide your custom ones.
 
 ## Docs
 
-This documentation is for the `unique-names-generator` v4.
+This documentation is for the `unique-names-generator-lite` v1.
 
-If you are using a version 3.x of the library, please refer to the
-[v3 Docs](https://github.com/andreasonny83/unique-names-generator/blob/v3.1.1/README.md)
-
-For the version 1 & 2, please refer to the
-[v2 Docs](https://github.com/andreasonny83/unique-names-generator/blob/v2.0.2/README.md)
-
-### Migrating to v4
-
-If you want to migrate, from an older version of the library to v4, please read the [Migration guide](#migration-guide)
 
 ## Table of contents
 
-- [Unique Names Generator](#unique-names-generator)
-  - [What is Unique name generator?](#what-is-unique-name-generator)
+- [Unique Names Generator Lite](#unique-names-generator-lite)
+  - [What is Unique name generator lite?](#what-is-unique-name-generator-lite)
   - [Docs](#docs)
     - [Migrating to v4](#migrating-to-v4)
   - [Table of contents](#table-of-contents)
@@ -58,10 +44,6 @@ If you want to migrate, from an older version of the library to v4, please read 
       - [Adjectives](#adjectives)
       - [Animals](#animals)
       - [Colors](#colors)
-      - [Countries](#countries)
-      - [Names](#names)
-      - [Languages](#languages)
-      - [Star Wars](#star-wars)
     - [Default dictionaries](#default-dictionaries)
     - [Custom dictionaries](#custom-dictionaries)
     - [Numbers Dictionary](#numbers-dictionary)
@@ -85,17 +67,14 @@ If you want to migrate, from an older version of the library to v4, please read 
 
 ## Prerequisites
 
-This project requires NodeJS (at least version 6) and NPM.
+This project requires NodeJS (at least version 18) and NPM.
 [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
 To make sure you have them available on your machine,
 try running the following command.
 
 ```sh
 $ node --version
-v7.10.1
-
-$ npm --version
-4.2.0
+v18.0.0
 ```
 
 ## Installation
@@ -105,19 +84,19 @@ $ npm --version
 Install the package using npm or Yarn
 
 ```sh
-$ npm i -S unique-names-generator
+$ npm i -S unique-names-generator-lite
 ```
 
 Or using Yarn
 
 ```sh
-$ yarn add unique-names-generator
+$ yarn add unique-names-generator-lite
 ```
 
 ## Usage
 
 ```js
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
 
 const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals] }); // big_red_donkey
 
@@ -310,61 +289,6 @@ const config: Config = {
 const characterName: string = uniqueNamesGenerator(config); // red
 ```
 
-#### Countries
-
-A list of more than 250 different countries
-
-```typescript
-import { uniqueNamesGenerator, Config, countries } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [countries]
-}
-
-const characterName: string = uniqueNamesGenerator(config); // United Arab Emirates
-```
-
-#### Names
-
-A list of more than 4,900 unique names
-
-```typescript
-import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [names]
-}
-
-const characterName: string = uniqueNamesGenerator(config); // Winona
-```
-
-#### Languages
-
-A list of languages
-
-```typescript
-import { uniqueNamesGenerator, Config, languages } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [languages]
-}
-
-const characterName: string = uniqueNamesGenerator(config); // polish
-```
-
-#### Star Wars
-
-A list of more than 80 unique character names from Star Wars
-
-```typescript
-import { uniqueNamesGenerator, Config, starWars } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [starWars]
-}
-
-const characterName: string = uniqueNamesGenerator(config); // Han Solo
-```
 
 ### Default dictionaries
 
@@ -506,118 +430,6 @@ const characterName: string = uniqueNamesGenerator({
 }); // eccentric-blue-iceman
 ```
 
-## Migration guide
-
-### Migration guide from version 3 to version 4
-
-Unique names generator v4 implement a new breaking change.
-
-#### Mandatory `dictionaries` config
-
-You must now explicitly provide the library with the dictionaries to use.
-This is for improving flexibility and allowing tree-shaking to remove the unused dictionaries from
-your bundle size.
-
-Read more about the dictionaries in the [Dictionaries](dictionaries-available) section.
-
-**v3**
-
-```typescript
-import { uniqueNamesGenerator } from 'unique-names-generator';
-
-const randomName = uniqueNamesGenerator(); // big_red_donkey
-```
-
-**v4**
-
-```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [adjectives, colors, animals]
-}
-
-const randomName = uniqueNamesGenerator(config); // big_red_donkey
-```
-
-### Migration guide from version 1 or 2
-
-Unique names generator v3 implements a couple of breaking changes.
-If are upgrading your library from a version 1 or 2, you might be interested in knowing the following:
-
-#### uniqueNamesGenerator
-
-This will now work only when a `dictionaries` array is provided according to the
-[v4 breaking change](#mandatory-dictionaries-config).
-
-**v2**
-
-```typescript
-import { uniqueNamesGenerator } from 'unique-names-generator';
-
-const randomName = uniqueNamesGenerator();
-```
-
-**v4**
-
-```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [adjectives, colors, animals]
-}
-
-const randomName = uniqueNamesGenerator(config); // big_red_donkey
-```
-
-#### Separator
-
-**v2**
-
-```typescript
-import { uniqueNamesGenerator } from 'unique-names-generator';
-
-const shortName = uniqueNamesGenerator('-'); // big-red-donkey
-```
-
-**v4**
-
-```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [adjectives, colors, animals],
-  separator: '-'
-}
-
-const shortName = uniqueNamesGenerator(config); // big-red-donkey
-```
-
-#### Short
-
-The `short` property has been replaced by `length` so you can specify as many word as you want
-
-**v2**
-
-```typescript
-import { uniqueNamesGenerator } from 'unique-names-generator';
-
-const shortName = uniqueNamesGenerator(true); // big-donkey
-```
-
-**v4**
-
-```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
-
-const config: Config = {
-  dictionaries: [adjectives, colors, animals],
-  length: 2
-}
-
-const shortName = uniqueNamesGenerator(config); // big-donkey
-```
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -631,31 +443,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## License
 
-[MIT License](https://andreasonny.mit-license.org/2018) © Andrea SonnY
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://about.me/andreasonny83"><img src="https://avatars0.githubusercontent.com/u/8806300?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrea Sonny</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/commits?author=andreasonny83" title="Code">💻</a> <a href="https://github.com/andreasonny83/unique-names-generator/commits?author=andreasonny83" title="Documentation">📖</a> <a href="#question-andreasonny83" title="Answering Questions">💬</a> <a href="#projectManagement-andreasonny83" title="Project Management">📆</a> <a href="#ideas-andreasonny83" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-andreasonny83" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/abhijitmehta"><img src="https://avatars2.githubusercontent.com/u/5481869?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhijit Mehta</b></sub></a><br /><a href="#ideas-abhijitmehta" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://grantblakeman.com/"><img src="https://avatars1.githubusercontent.com/u/867428?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Grant Blakeman</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/commits?author=gblakeman" title="Code">💻</a> <a href="https://github.com/andreasonny83/unique-names-generator/issues?q=author%3Agblakeman" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/erdahuja"><img src="https://avatars3.githubusercontent.com/u/15168716?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deepak</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/commits?author=erdahuja" title="Documentation">📖</a> <a href="#ideas-erdahuja" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/ajainuary"><img src="https://avatars1.githubusercontent.com/u/30972152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Jain</b></sub></a><br /><a href="#ideas-ajainuary" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/digibake"><img src="https://avatars1.githubusercontent.com/u/6882093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Digibake</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/issues?q=author%3Adigibake" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://chasemoskal.com/"><img src="https://avatars1.githubusercontent.com/u/7145590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chase Moskal</b></sub></a><br /><a href="#ideas-chase-moskal" title="Ideas, Planning, & Feedback">🤔</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/tholst"><img src="https://avatars3.githubusercontent.com/u/2027794?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tholst</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/commits?author=tholst" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Gusten"><img src="https://avatars2.githubusercontent.com/u/1529107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Johan Gustafsson</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/commits?author=Gusten" title="Code">💻</a> <a href="#ideas-Gusten" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://alex.codes/"><img src="https://avatars.githubusercontent.com/u/5101376?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Wild</b></sub></a><br /><a href="https://github.com/andreasonny83/unique-names-generator/issues?q=author%3Aajwild" title="Bug reports">🐛</a> <a href="https://github.com/andreasonny83/unique-names-generator/commits?author=ajwild" title="Code">💻</a></td>
-  </tr>
-</table>
+[MIT License](https://github.com/bikramswain1992/unique-names-generator-lite/blob/main/LICENSE)
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
