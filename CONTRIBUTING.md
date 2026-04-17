@@ -8,7 +8,7 @@ By participating in this project, you agree to abide by the [code of conduct].
 Fork, then clone the repo:
 
 ```
-git clone git@github.com:your-username/unique-names-generator.git
+git clone git@github.com:your-username/unique-names-generator-lite.git
 ```
 
 Set up your machine:
@@ -33,7 +33,7 @@ npm test
 
 We follow [semantic versioning](https://semver.org). We release patch versions for bugfixes, minor versions for new features, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance.
 
-Every significant change is documented in the [release notes](https://github.com/andreasonny83/unique-names-generator/releases/latest).
+Every significant change is documented in the [release notes](https://github.com/andreasonny83/unique-names-generator-lite/releases/latest).
 
 ## Style Guide
 
@@ -52,7 +52,7 @@ Please consider these guidelines when filing a pull request:
 
 Push to your fork and [submit a pull request][pr].
 
-[pr]: https://github.com/andreasonny83/unique-names-generator/compare/
+[pr]: https://github.com/andreasonny83/unique-names-generator-lite/compare/
 
 At this point you're waiting on us.
 We may suggest some changes or improvements or alternatives.
