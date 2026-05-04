@@ -96,7 +96,7 @@ $ yarn add unique-names-generator-lite
 ## Usage
 
 ```js
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator-lite';
 
 const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals] }); // big_red_donkey
 
@@ -112,7 +112,7 @@ This package export a type definition file so you can use it, out of the box,
 inside your Typescript project.
 
 ```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator-lite';
 
 const customConfig: Config = {
   dictionaries: [adjectives, colors],
@@ -148,7 +148,7 @@ This is an array of dictionaries. Each dictionary is an array of strings contain
 The [provided dictionaries](#dictionaries-available) can be imported from the library as a separate modules and provided in the desired order.
 
 ```typescript
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator-lite';
 
 const shortName: string = uniqueNamesGenerator({
   dictionaries: [colors, adjectives, animals]
@@ -193,7 +193,7 @@ By setting the value to `upperCase`, the words, will be returned with all the le
 The `capital` option will capitalize each word of the unique name generated
 
 ```typescript
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator-lite';
 
 const capitalizedName: string = uniqueNamesGenerator({
   dictionaries: [colors, adjectives, animals],
@@ -220,7 +220,7 @@ required: `false`
 A seed is used when wanting to deterministically generate a name. As long as the provided seed is the same the generated name will also always be the same.
 
 ```typescript
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator-lite';
 const config: Config = {
   dictionaries: [adjectives, colors, animals],
   separator: '-',
@@ -231,7 +231,7 @@ const nameFromSeed: string = uniqueNamesGenerator(config); // continuous-gray-dr
 ```
 
 ```typescript
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator-lite';
 const config: Config = {
   dictionaries: [adjectives, colors, animals],
   separator: '-',
@@ -252,7 +252,7 @@ This is a dynamic dictionary. Read more in the [Numbers Dictionary](#numbers-dic
 A list of more than 1,400 adjectives ready for you to use
 
 ```typescript
-import { uniqueNamesGenerator, Config, adjectives } from 'unique-names-generator';
+import { uniqueNamesGenerator, Config, adjectives } from 'unique-names-generator-lite';
 
 const config: Config = {
   dictionaries: [adjectives]
@@ -266,7 +266,7 @@ const characterName: string = uniqueNamesGenerator(config); // big
 A list of more than 350 animals ready to use
 
 ```typescript
-import { uniqueNamesGenerator, Config, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, Config, animals } from 'unique-names-generator-lite';
 
 const config: Config = {
   dictionaries: [animals]
@@ -280,7 +280,7 @@ const characterName: string = uniqueNamesGenerator(config); // donkey
 A list of more than 50 different colors
 
 ```typescript
-import { uniqueNamesGenerator, Config, colors } from 'unique-names-generator';
+import { uniqueNamesGenerator, Config, colors } from 'unique-names-generator-lite';
 
 const config: Config = {
   dictionaries: [colors]
@@ -302,7 +302,7 @@ using custom ones.
 The new syntax for using the default dictionaries is the following:
 
 ```typescript
-import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, Config, adjectives, colors, animals } from 'unique-names-generator-lite';
 
 const config: Config = {
   dictionaries: [adjectives, colors, animals]
@@ -319,7 +319,7 @@ in order to meet your business requirements.
 You can easily do that using the [dictionaries](#dictionaries-available) option.
 
 ```typescript
-import { uniqueNamesGenerator } from 'unique-names-generator';
+import { uniqueNamesGenerator } from 'unique-names-generator-lite';
 
 const starWarsCharacters = [
   'Han Solo',
@@ -344,7 +344,7 @@ const characterName: string = uniqueNamesGenerator({
 You can easily generate random numbers inside your unique name using the Numbers dictionary helper.
 
 ```typescript
-import { uniqueNamesGenerator, NumberDictionary } from 'unique-names-generator';
+import { uniqueNamesGenerator, NumberDictionary } from 'unique-names-generator-lite';
 
 const numberDictionary = NumberDictionary.generate({ min: 100, max: 999 });
 const characterName: string = uniqueNamesGenerator({
@@ -404,7 +404,7 @@ You can reuse the dictionaries provided by the library.
 Just import the ones that you need and use them directly in your app.
 
 ```typescript
-import { uniqueNamesGenerator, adjectives, colors } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors } from 'unique-names-generator-lite';
 
 const improvedAdjectives = [
   ...adjectives,
